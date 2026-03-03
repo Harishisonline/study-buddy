@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { jsPDF } from 'jspdf'
 
-const API = import.meta.env.VITE_API_BASE || 'https://study-buddy-backend-reh8.onrender.com'
+const API = import.meta.env.VITE_API_BASE || 'https://study-buddy-backend-docker.onrender.com'
 
 export default function Notes() {
   const [notes, setNotes] = useState([])
