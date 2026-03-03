@@ -1,0 +1,24 @@
+.app { min-height: 100vh; background: #0b0b0f; color: #f1f1f5; font-family: Inter, system-ui, sans-serif; }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 32px; border-bottom: 1px solid #1f1f2a; background: #0e0e14; position: sticky; top: 0; }
+.brand { font-weight: 700; letter-spacing: 0.5px; color: #8b5cf6; }
+.links a { margin-left: 16px; color: #c7c7d1; text-decoration: none; }
+.links a:hover { color: #8b5cf6; }
+.main { padding: 32px; }
+.card { background: #11111a; border: 1px solid #1f1f2a; padding: 24px; border-radius: 12px; }
+.primary { background: #8b5cf6; color: white; border: none; padding: 10px 16px; border-radius: 8px; cursor: pointer; }
+.danger { background: #ef4444; color: white; border: none; padding: 8px 12px; border-radius: 8px; }
+.row { display: flex; gap: 12px; align-items: center; margin-top: 12px; flex-wrap: wrap; }
+.textarea { width: 100%; background: #0f0f15; color: #f1f1f5; border: 1px solid #1f1f2a; border-radius: 8px; padding: 12px; }
+.muted { color: #9aa0a6; }
+.chat { background: #0f0f15; border: 1px solid #1f1f2a; padding: 16px; border-radius: 12px; min-height: 240px; margin-bottom: 12px; }
+.msg { padding: 8px 12px; margin: 8px 0; border-radius: 8px; max-width: 80%; }
+.msg.user { background: #1f2937; align-self: flex-end; }
+.msg.assistant { background: #1a1a25; border-left: 2px solid #8b5cf6; }
+.notes { display: grid; grid-template-columns: 260px 1fr; gap: 16px; }
+.sidebar { background: #11111a; border: 1px solid #1f1f2a; padding: 16px; border-radius: 12px; }
+.note-item { padding: 10px; margin-bottom: 8px; background: #0f0f15; border-radius: 8px; cursor: pointer; }
+.note-item.active { outline: 1px solid #8b5cf6; }
+.canvas { background: #11111a; border: 1px solid #1f1f2a; border-radius: 12px; padding: 16px; }
+.canvas-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.canvas .title { background: transparent; color: #f1f1f5; border: none; font-size: 20px; font-weight: 600; width: 60%; }
+.canvas-body { width: 100%; height: 60vh; margin-top: 12px; background: #0f0f15; color: #f1f1f5; border: 1px solid #1f1f2a; border-radius: 8px; padding: 12px; }

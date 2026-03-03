@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: study-buddy-backend
+    env: python
+    plan: free
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port 8000"
+    rootDir: backend
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: study-buddy-db
+          property: connectionString
+
+  - type: web
+    name: study-buddy-frontend
+    env: static
+    plan: free
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: dist
+    rootDir: frontend
+    envVars:
+      - key: VITE_API_BASE
+        value: "https://study-buddy-backend.onrender.com"
+
+
+Databases:
+  - name: study-buddy-db
+    plan: free
+    databaseName: study_buddy
+    user: study_buddy
